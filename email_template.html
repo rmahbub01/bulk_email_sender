@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programming Club</title>
+  <style>
+    @media only screen and (max-width: 600px) {
+      .container {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (max-width: 900px) {
+      .container {
+        width: 90%;
+      }
+    }
+
+    @media only screen and (min-width: 901px) {
+      .container {
+        width: 80%;
+      }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #1e1e1e; /* Dark background color */
+      color: #fff; /* Light text color for dark mode */
+    }
+
+    .container {
+      background-color: #212529; /* Darker background color for content area */
+      width: 80%;
+      margin: 50px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      padding: 30px;
+    }
+
+    .header {
+      text-align: center;
+      color: #fff; /* Light text color for headings in dark mode */
+    }
+
+    .header img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 20px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .header h1 {
+      font-family: 'Arial', sans-serif;
+      margin-bottom: 0;
+    }
+
+    .email-body {
+      padding-top: 20px;
+    }
+
+    .recipient-details {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .recipient-details h2 {
+      color: #fff; /* Light text color for greetings in dark mode */
+    }
+
+    .greetings {
+      line-height: 1.5;
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #ccc; /* Lighter text color for body content in dark mode */
+      font-family: 'Arial', sans-serif;
+      text-align: justify;
+      padding-left: 3%;
+      padding-right: 3%;
+    }
+
+    .footer {
+      background-color: #333; /* Darker footer background color */
+      color: #fff; /* Light text color for footer */
+      text-align: center;
+      padding: 15px;
+      border-radius: 0 0 10px 10px; /* Rounded corners only at the bottom */
+    }
+
+    .footer p {
+      margin: 5px 0; /* Adjust spacing between footer elements */
+    }
+
+    .footer a {
+      color: #17bebb; /* Accent color for links in footer */
+      text-decoration: none; /* Remove underline from links */
+    }
+
+    .footer a:hover {
+      text-decoration: underline; /* Add underline on hover */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaYY6Lo_DEj_643JdkKzxr_HWxnDAcSvRVD33REqok_rrymUkajCkdyCsFetmFj6C9M5_h2058VfTBV0P8kzwihyqYT=s1600" alt="Programming Club Logo">
+      <h1>Programming Club</h1>
+    </header>
+    <main class="email-body">
+      <section class="recipient-details">
+        <h2 style="font-size: 1.5em; color: #17bebb; margin-bottom: 5px;">Welcome, {{name}}!</h2>
+        <!-- <p style="font-size: 16px; color: #333; font-family: 'Arial', sans-serif;">Your position: {{position}}</p> -->
+      </section>
+      <section class="greetings">
+        <p>Congratulations on being selected in the primary selection of the Programming Club! We appreciate your interest to be a member of our class. As our seats are limited we invite you to be on a meeting with us (via online) where we get to know you and your interest more closely.</p>
+        <p>For further information please join this WhatsApp group: link</p>
+        <p>(Note: If the provided above doesn’t work reply to this email with your WhatsApp number.)</p>
+        <p>Best regards,</p>
+        <p>Programming Club<br>Department of Statistics, CU</p>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>Connect with us:</p>
+      <p>
+        <a href="https://www.facebook.com/programmingclub.stat.cu" target="_blank">Facebook</a> | 
+        <a href="https://www.linkedin.com/company/programmingclub-stat-cu" target="_blank">LinkedIn</a>
+      </p>
+      <p>Contact us: programmingclub.stat.cu@gmail.com</p>
+      <p>&copy; {{year}} Programming Club. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+
+</html>
