@@ -1,7 +1,7 @@
 import os
 from datetime import datetime
 import csv
-import smtplib
+import smtplib, ssl
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from jinja2 import Environment, FileSystemLoader
@@ -22,8 +22,8 @@ class EmailSender:
         message["Subject"] = subject
         message.attach(MIMEText(body, "html"))
 
-        with smtplib.SMTP(self.smtp_server, self.smtp_port) as server:
-            server.starttls()
+        context = ssl.create_default_context()
+        with smtplib.SMTP_SSL(self.smtp_server, self.smtp_port, context=context) as server:
             server.login(self.sender_email, self.sender_password)
             server.sendmail(self.sender_email, receiver_email, message.as_string())
 
